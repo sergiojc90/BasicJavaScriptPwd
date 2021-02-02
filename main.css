@@ -1,6 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding-top: 5vh;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background: turquoise;
@@ -37,6 +38,13 @@ button{
     border-radius: 10px;
     border-color: transparent;
     box-shadow: 5px 5px 10px rgb(92, 88, 88);
+}
+#tictac{
+    color: white;
+    text-decoration: none;
+}
+#tictac:visited{
+    text-decoration: none;
 }
 @media screen and (max-height:400px){
     button{
