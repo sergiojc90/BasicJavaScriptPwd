@@ -1,13 +1,16 @@
 body{
-    align-items: center;
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background: turquoise;
 }
 .button{
     text-align: center;
-    margin-top: 35vh;
+    padding: 20px;
 }
 button{
+    text-align: center;
     width: 25vw;
     height: 25vh;
     background: linear-gradient(rgb(92, 88, 88), rgb(61, 57, 57) );

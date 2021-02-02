@@ -8,9 +8,20 @@
 </head>
 <body>
 
-    <div class="button">
-        <button onclick="login()">Log in</button>
+    <div class="main">
+        <div class="button">
+            <button onclick="login()">Log in</button>
+        </div>
+        
+        <div class="button">
+            <button onclick="javaname()">Want a question?</button>
+        </div>
+    
+        <div class="button">
+            <button onclick="seasons()">In what season are we?</button>
+        </div>
     </div>
+
 
     <script>
 
@@ -33,6 +44,45 @@
             }else{
                 alert("I don't know you, who is "+user);
             }
+        }
+
+        function javaname(){
+            let answer = prompt("What's the \"official\" name of JavaScript?");
+
+            (answer === "ECMAScript") ? alert("Right!"):alert("You don't know?\n\"ECMAScript\"");
+        }
+
+        function seasons(){
+            const month = new Date().getMonth();
+
+            switch (month) {
+                // January, February, March
+                case 0:
+                case 1:
+                case 2:
+                    alert("Winter");
+                    break;
+                // April, May, June
+                case 3:
+                case 4:
+                case 5:
+                    alert("Spring");
+                    break;
+                // July, August, September
+                case 6:
+                case 7:
+                case 8:
+                    alert("Summer");
+                    break;
+                // October, November, December
+                case 9:
+                case 10:
+                case 11:
+                    alert"Autumn");
+                    break;
+                default:
+                    alert("Something went wrong.");
+             }
         }
 
     </script>
