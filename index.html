@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>JavaScritp Basics</title>
+</head>
+<body>
+
+    <div class="button">
+        <button onclick="login()">Log in</button>
+    </div>
+
+    <script>
+
+        function login(){
+            let user = prompt("Please enter your username");
+            
+            if (user === "Admin"){
+                let password = prompt("Hi "+user+", please enter your password");
+
+                if (password==="TheMaster"){
+                    alert("Welcome");
+                }else if(password === ""|| password === null){
+                    alert("Canceled");
+                }else{
+                    alert("Wrong password");
+                }
+
+            }else if(user==="" || user===null){
+                alert("Canceled");
+            }else{
+                alert("I don't know you, who is "+user);
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

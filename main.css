@@ -1,0 +1,30 @@
+body{
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: turquoise;
+}
+.button{
+    text-align: center;
+    margin-top: 35vh;
+}
+button{
+    width: 25vw;
+    height: 25vh;
+    background: linear-gradient(rgb(92, 88, 88), rgb(61, 57, 57) );
+    color: white;
+    font-size: 40px;
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: 5px 5px 10px rgb(92, 88, 88);
+}
+@media screen and (max-height:400px){
+    button{
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:250px){
+    button{
+        width: 100px;
+    }  
+}
