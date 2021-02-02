@@ -5,6 +5,9 @@ body{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background: turquoise;
 }
+
+/*This part is just to try the grid display property in css and the firefox developer tools*/
+
 .container{
     text-align: center;
     display: grid;
@@ -18,6 +21,8 @@ body{
     border: rgb(65, 42, 165) solid;
     border-radius: 5px;
 }
+/*End of test*/
+
 .button{
     text-align: center;
     padding: 20px;
