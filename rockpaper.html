@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergio's Tic Tac Toe</title>
+    <title>Sergio's Rock Paper Scissors game</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html" class="mainpage">Home</a></li>
-        </ul>
-    </nav>
+    <main id="main">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="mainpage">Home</a></li>
+            </ul>
+        </nav>
+    </main>
+    <script>
+        
+        console.log(playRound(playerSelection,computerSelection));
+
+        function computerPlay(){
+            let computer = Math.random()*9;
+            let selection = "";
+            
+            if (computer>=7){
+                selection = "ROCK";
+            }else if(computer >=4 && computer<7){
+                selection = "PAPER";
+            }else{
+                selection = "SCISSORS";
+            }
+
+            return selection;
+        }
+
+        function playRound(playerSelection,computerSelection){
+        }
+
+        function game(){
+
+        }
+
+    </script>
 </body>
 </html>
