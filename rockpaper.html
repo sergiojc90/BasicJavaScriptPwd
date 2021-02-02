@@ -16,7 +16,6 @@
     </main>
     <script>
         
-        console.log(playRound(playerSelection,computerSelection));
 
         function computerPlay(){
             let computer = Math.random()*9;
@@ -34,6 +33,48 @@
         }
 
         function playRound(playerSelection,computerSelection){
+            let endgame = "";
+
+            switch(playerSelection){
+                case "ROCK":
+                    switch(computerSelection){
+                        case "ROCK":
+                            return endgame = "TIE";
+                            break;
+                        case "PAPER":
+                            return endgame = "LOSE";
+                            break;
+                        case "SCISSORS":
+                            return endgame = "WIN"
+                            break;
+                    }
+                    break;
+                case "PAPER":
+                    switch(computerSelection){
+                        case "ROCK":
+                            return endgame = "WIN";
+                            break;
+                        case "PAPER":
+                            return endgame = "TIE";
+                            break;
+                        case "SCISSORS":
+                            return endgame = "LOSE"
+                            break;
+                    }
+                    break;
+                case "SCISSORS":
+                    switch(computerSelection){
+                        case "ROCK":
+                            return endgame = "LOSE";
+                            break;
+                        case "PAPER":
+                            return endgame = "WIN";
+                            break;
+                        case "SCISSORS":
+                            return endgame = "TIE"
+                            break;
+                    }    
+            }
         }
 
         function game(){
