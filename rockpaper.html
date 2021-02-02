@@ -48,7 +48,6 @@
                             return endgame = "WIN"
                             break;
                     }
-                    return endgame;
                     break;
                 case "PAPER":
                     switch(computerSelection){
@@ -62,7 +61,6 @@
                             return endgame = "LOSE"
                             break;
                     }
-                    return endgame;
                     break;
                 case "SCISSORS":
                     switch(computerSelection){
@@ -76,8 +74,9 @@
                             return endgame = "TIE"
                             break;
                     }   
-                    return endgame;
             }
+            return endgame;
+
         }
 
         function game(){
@@ -85,18 +84,33 @@
                 let machine = computerPlay();
                 let user = prompt("Selecto rock, paper or scissors").toUpperCase();
 
-                console.log(machine);
+                console.log("You selected " + user);
+                console.log("The machine selected "+ machine);
 
                 return playRound(user,machine);
         }
 
         function match(){
-            let score = 0;
+            let win = 0;
+            let lose = 0;
+            let tie = 0;
 
             for(i=0;i<5;i++){
+                results = game();
+                console.log("You " + results);
 
+                if(results == "WIN"){
+                    win++;
+                }else if (results == "LOSE"){
+                    lose++;
+                }else{
+                    tie++;
+                }
             }
+
+            return "Wins: "+win+"  Loses: "+ lose+ "  Ties: " +tie;
         }
+            
     </script>
 </body>
 </html>
