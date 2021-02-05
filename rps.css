@@ -4,6 +4,9 @@ body{
     margin: 0;
     padding: 0;
 }
+h1{
+    color: white;
+}
 #main{
     display: flex;
     flex-direction: column;
@@ -12,26 +15,19 @@ body{
     align-items: center;
     justify-content: center;
 }
-button{
+.btn{
     border: .4rem solid black;
     border-radius: .5rem;
     margin: 1rem;
     font-size: 1.5rem;
     padding: 1rem .5rem;
-    transition: all .07s ease;
     width: 20rem;
     text-align: center;
     color: white;
     background: rgba(0,0,0,0.4);
     text-shadow: 0 0 .5rem black;
 }
-#rockpaper{
-    color: white;
-    text-decoration: none;
-}
-#rockpaper:visited{
-    text-decoration: none;
-}
+
 @media screen and (max-height:400px){
     button{
         height: 100px;

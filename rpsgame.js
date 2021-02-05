@@ -1,3 +1,5 @@
+document.getElementById("startBtn").classList.remove("btn");
+
 function computerPlay(){
     let computer = Math.random()*9;
     let selection = "";
