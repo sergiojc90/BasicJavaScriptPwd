@@ -25,7 +25,13 @@ button{
     background: rgba(0,0,0,0.4);
     text-shadow: 0 0 .5rem black;
 }
-
+#rockpaper{
+    color: white;
+    text-decoration: none;
+}
+#rockpaper:visited{
+    text-decoration: none;
+}
 @media screen and (max-height:400px){
     button{
         height: 100px;

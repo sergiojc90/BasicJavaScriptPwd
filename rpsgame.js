@@ -1,31 +1,3 @@
-const main = document.querySelector('#main');
-const content = document.createElement('div');
-const para = document.createElement('p');
-const heading3 = document.createElement('h3');
-const subcontent = document.createElement("div");
-const heading1 = document.createElement("h1");
-const para2 = document.createElement('p');
-
-content.classList.add("content");
-content.textContent = "This is the glorious text-content";
-
-para.textContent = "Hey I'm red";
-para.style.color = "red";
-
-heading3.textContent = "I'm a blue h3!";
-heading3.style.color = "blue";
-
-heading1.textContent = "I'm in a div";
-para2.textContent = "ME TOO!";
-
-subcontent.appendChild(heading1);
-subcontent.appendChild(para2);
-
-main.appendChild(content);
-main.appendChild(para);
-main.appendChild(heading3);
-main.appendChild(subcontent);
-
 function computerPlay(){
     let computer = Math.random()*9;
     let selection = "";
