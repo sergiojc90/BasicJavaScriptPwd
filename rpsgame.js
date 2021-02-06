@@ -5,7 +5,7 @@ const thegame = document.createElement("div");
 const rock = document.createElement("img");
 const paper = document.createElement("img");
 const scissors = document.createElement("img");
-const returnBtn = document.createElement("img");
+const returnBtn = document.createElement("div");
 
 rock.setAttribute("class","options");
 rock.setAttribute("src","./images/rock.png");
@@ -14,6 +14,7 @@ paper.setAttribute("src","./images/paper.png");
 scissors.setAttribute("class","options");
 scissors.setAttribute("src","./images/scissors.png");
 thegame.setAttribute("class","theGame");
+returnBtn.setAttribute("class","returnBtn");
 
 
 startBtn.addEventListener("click", startGame);
@@ -26,6 +27,8 @@ function startGame(e){
     thegame.appendChild(paper);
     thegame.appendChild(scissors);
     main.appendChild(thegame);
+    main.appendChild(returnBtn);
+    returnBtn.textContent = "Exit";
 }
 
 function computerPlay(){
