@@ -1,4 +1,16 @@
-document.getElementById("startBtn").classList.remove("btn");
+const main = document.getElementById("main");
+const title = document.getElementById("title");
+const startBtn = document.querySelector("#startBtn");
+const thegame = document.createElement("div");
+const rock = document.createElement("button");
+const paper = document.createElement("button");
+const scissors = document.createElement("button");
+
+startBtn.addEventListener("click", deleteBtn);
+
+function deleteBtn(e){
+    this.parentNode.removeChild(this);
+}
 
 function computerPlay(){
     let computer = Math.random()*9;
