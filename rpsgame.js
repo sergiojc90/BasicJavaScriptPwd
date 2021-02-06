@@ -2,14 +2,17 @@ const main = document.getElementById("main");
 const title = document.getElementById("title");
 const startBtn = document.querySelector("#startBtn");
 const thegame = document.createElement("div");
-const rock = document.createElement("button");
-const paper = document.createElement("button");
-const scissors = document.createElement("button");
-const returnBtn = document.createElement("button");
+const rock = document.createElement("img");
+const paper = document.createElement("img");
+const scissors = document.createElement("img");
+const returnBtn = document.createElement("img");
 
 rock.setAttribute("class","options");
+rock.setAttribute("src","./images/rock.png");
 paper.setAttribute("class","options");
+paper.setAttribute("src","./images/paper.png");
 scissors.setAttribute("class","options");
+scissors.setAttribute("src","./images/scissors.png");
 thegame.setAttribute("class","theGame");
 
 
@@ -18,7 +21,7 @@ startBtn.classList.add
 
 function startGame(e){
     this.parentNode.removeChild(this);
-    title.parentNode.removeChild(title);
+    title.textContent = "Choose one option";
     thegame.appendChild(rock);
     thegame.appendChild(paper);
     thegame.appendChild(scissors);
