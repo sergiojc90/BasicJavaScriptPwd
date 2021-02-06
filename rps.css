@@ -95,6 +95,7 @@ h1{
     }  
     .options:hover{
         cursor: pointer;
+        background: transparent;
         border:transparent;
     }
     .theGame{
@@ -124,6 +125,7 @@ h1{
     .options:hover{
         cursor: pointer;
         border:transparent;
+        background: transparent;
     }
     .theGame{
         width: 100%;

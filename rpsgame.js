@@ -20,6 +20,11 @@ returnBtn.setAttribute("class","returnBtn");
 startBtn.addEventListener("click", startGame);
 startBtn.classList.add
 
+rock.addEventListener("click",playRound("ROCK",computerPlay));
+paper.addEventListener("click",playRound("PAPER",computerPlay));
+scissors.addEventListener("click",playRound("ROCK",computerPlay));
+
+// This function create the images for rock, paper, scissors options.
 function startGame(e){
     this.parentNode.removeChild(this);
     title.textContent = "Choose one option";
@@ -31,6 +36,7 @@ function startGame(e){
     returnBtn.textContent = "Exit";
 }
 
+// Fuction to create a random number and select rock, paper or scissors depending on the result.
 function computerPlay(){
     let computer = Math.random()*9;
     let selection = "";
@@ -102,25 +108,3 @@ function game(){
 
         return playRound(user,machine);
 }
-
-function match(){
-    let win = 0;
-    let lose = 0;
-    let tie = 0;
-
-    for(i=0;i<5;i++){
-        results = game();
-        console.log("You " + results);
-
-        if(results == "WIN"){
-            win++;
-        }else if (results == "LOSE"){
-            lose++;
-        }else{
-            tie++;
-        }
-    }
-
-    return "Wins: "+win+"  Loses: "+ lose+ "  Ties: " +tie;
-}
-    
