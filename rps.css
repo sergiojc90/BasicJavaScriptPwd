@@ -34,6 +34,9 @@ h1{
     border-color: #ff8800;
     box-shadow: 0 0 0.5rem #ff8800;
 }
+.options div{
+    font-size: 20px;
+}
 
 @media screen and (max-height:400px){
     button{

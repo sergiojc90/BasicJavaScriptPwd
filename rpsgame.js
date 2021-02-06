@@ -5,10 +5,13 @@ const thegame = document.createElement("div");
 const rock = document.createElement("button");
 const paper = document.createElement("button");
 const scissors = document.createElement("button");
+const returnBtn = document.createElement("button");
 
-rock.textContent = "Rock";
-paper.textContent = "Paper";
-scissors.textContent = "Scissors";
+rock.setAttribute("class","options");
+paper.setAttribute("class","options");
+scissors.setAttribute("class","options");
+thegame.setAttribute("class","theGame");
+
 
 startBtn.addEventListener("click", startGame);
 startBtn.classList.add
