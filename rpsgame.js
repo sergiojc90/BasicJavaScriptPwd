@@ -8,13 +8,13 @@ const scissors = document.createElement("img");
 const returnBtn = document.createElement("div");
 
 rock.setAttribute("class","options");
-rock.setAttribute("value","ROCK");
+rock.setAttribute("name","ROCK");
 rock.setAttribute("src","./images/rock.png");
 paper.setAttribute("class","options");
-paper.setAttribute("value","PAPER");
+paper.setAttribute("name","PAPER");
 paper.setAttribute("src","./images/paper.png");
 scissors.setAttribute("class","options");
-scissors.setAttribute("value","SCISSORS");
+scissors.setAttribute("name","SCISSORS");
 scissors.setAttribute("src","./images/scissors.png");
 thegame.setAttribute("class","theGame");
 returnBtn.setAttribute("class","returnBtn");
@@ -34,10 +34,16 @@ function startGame(e){
     returnBtn.textContent = "Exit";
 
     window.addEventListener("click",function(e){
-        console.log(e);
+        const optionSelection = document.querySelector(`img[name ="${e.target.name}"`);
+        if(!optionSelection) return;
+        return console.log(e.target.name);
     })
     const options = Array.from(document.querySelectorAll(".options"));
-    options.forEach(key => key.addEventListener("click",console.log("hi")))
+    
+}
+//
+function playerSelection(){
+    
 }
 // Fuction to create a random number and select rock, paper or scissors depending on the result.
 function computerPlay(){

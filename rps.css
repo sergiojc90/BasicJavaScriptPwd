@@ -11,6 +11,9 @@ h1{
     padding-top: 5vh;
     padding-bottom: 25vh;
 }
+img{
+    -webkit-user-drag: none;
+}
 #main{
     display: flex;
     flex-direction: column;
