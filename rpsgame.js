@@ -21,7 +21,6 @@ returnBtn.setAttribute("class","returnBtn");
 
 
 startBtn.addEventListener("click", startGame);
-startBtn.classList.add
 
 // This function create the images for rock, paper, scissors options.
 function startGame(e){
@@ -33,8 +32,12 @@ function startGame(e){
     main.appendChild(thegame);
     main.appendChild(returnBtn);
     returnBtn.textContent = "Exit";
+
+    window.addEventListener("click",function(e){
+        console.log(e);
+    })
     const options = Array.from(document.querySelectorAll(".options"));
-    console.log(options);
+    options.forEach(key => key.addEventListener("click",console.log("hi")))
 }
 // Fuction to create a random number and select rock, paper or scissors depending on the result.
 function computerPlay(){
