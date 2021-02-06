@@ -6,10 +6,19 @@ const rock = document.createElement("button");
 const paper = document.createElement("button");
 const scissors = document.createElement("button");
 
-startBtn.addEventListener("click", deleteBtn);
+rock.textContent = "Rock";
+paper.textContent = "Paper";
+scissors.textContent = "Scissors";
 
-function deleteBtn(e){
+startBtn.addEventListener("click", startGame);
+startBtn.classList.add
+
+function startGame(e){
     this.parentNode.removeChild(this);
+    thegame.appendChild(rock);
+    thegame.appendChild(paper);
+    thegame.appendChild(scissors);
+    main.appendChild(thegame);
 }
 
 function computerPlay(){
@@ -23,7 +32,6 @@ function computerPlay(){
     }else{
         selection = "SCISSORS";
     }
-
     return selection;
 }
 
