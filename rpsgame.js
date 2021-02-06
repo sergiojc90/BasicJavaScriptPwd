@@ -8,10 +8,13 @@ const scissors = document.createElement("img");
 const returnBtn = document.createElement("div");
 
 rock.setAttribute("class","options");
+rock.setAttribute("value","ROCK");
 rock.setAttribute("src","./images/rock.png");
 paper.setAttribute("class","options");
+paper.setAttribute("value","PAPER");
 paper.setAttribute("src","./images/paper.png");
 scissors.setAttribute("class","options");
+scissors.setAttribute("value","SCISSORS");
 scissors.setAttribute("src","./images/scissors.png");
 thegame.setAttribute("class","theGame");
 returnBtn.setAttribute("class","returnBtn");
@@ -19,10 +22,6 @@ returnBtn.setAttribute("class","returnBtn");
 
 startBtn.addEventListener("click", startGame);
 startBtn.classList.add
-
-rock.addEventListener("click",playRound("ROCK",computerPlay));
-paper.addEventListener("click",playRound("PAPER",computerPlay));
-scissors.addEventListener("click",playRound("ROCK",computerPlay));
 
 // This function create the images for rock, paper, scissors options.
 function startGame(e){
@@ -34,8 +33,9 @@ function startGame(e){
     main.appendChild(thegame);
     main.appendChild(returnBtn);
     returnBtn.textContent = "Exit";
+    const options = Array.from(document.querySelectorAll(".options"));
+    console.log(options);
 }
-
 // Fuction to create a random number and select rock, paper or scissors depending on the result.
 function computerPlay(){
     let computer = Math.random()*9;
