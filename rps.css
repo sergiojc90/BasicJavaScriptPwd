@@ -91,6 +91,7 @@ h1{
     }  
     .options:hover{
         cursor: pointer;
+        border:transparent;
     }
     .theGame{
         width: 100%;
@@ -118,6 +119,7 @@ h1{
     }  
     .options:hover{
         cursor: pointer;
+        border:transparent;
     }
     .theGame{
         width: 100%;
