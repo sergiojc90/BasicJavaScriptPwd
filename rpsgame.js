@@ -18,6 +18,7 @@ startBtn.classList.add
 
 function startGame(e){
     this.parentNode.removeChild(this);
+    title.parentNode.removeChild(title);
     thegame.appendChild(rock);
     thegame.appendChild(paper);
     thegame.appendChild(scissors);
