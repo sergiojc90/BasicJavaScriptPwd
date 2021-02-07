@@ -3,6 +3,7 @@ const title = document.getElementById("title");
 const startBtn = document.querySelector("#startBtn");
 const thegame = document.createElement("div");
 const scoreBoard = document.createElement("div");
+const computerimg = document.createElement("div");
 const win = document.createElement("div");
 const lose = document.createElement("div");
 const rock = document.createElement("img");
