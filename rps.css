@@ -29,6 +29,17 @@ img{
     justify-content: space-evenly;
     margin-top: 40px;
 }
+.scoreText{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.scoreText div{
+    font-size: 20px;
+    font-weight: bold;
+}
 .score{
     background: rgb(26,96,189);
     background: linear-gradient(59deg, rgba(26,96,189,1) 0%, rgba(90,105,175,1) 50%, rgba(31,43,180,1) 90%);

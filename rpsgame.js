@@ -3,8 +3,11 @@ const title = document.getElementById("title");
 const startBtn = document.querySelector("#startBtn");
 const thegame = document.createElement("div");
 const scoreBoard = document.createElement("div");
-const computerimg = document.createElement("div");
+const scoreText = document.createElement("div");
+const computerimg = document.createElement("img");
 const win = document.createElement("div");
+const winText = document.createElement("div");
+const loseText = document.createElement("div");
 const lose = document.createElement("div");
 const rock = document.createElement("img");
 const paper = document.createElement("img");
@@ -22,6 +25,7 @@ scissors.setAttribute("name","SCISSORS");
 scissors.setAttribute("src","./images/scissors.png");
 thegame.setAttribute("class","theGame");
 scoreBoard.setAttribute("class","scoreBoard");
+scoreText.setAttribute("class","scoreText");
 win.setAttribute("id","win");
 win.setAttribute("class","score");
 lose.setAttribute("id","lose");
@@ -40,10 +44,15 @@ function startGame(e){
     thegame.appendChild(scissors);
     scoreBoard.appendChild(win);
     scoreBoard.appendChild(lose);
+    scoreText.appendChild(winText);
+    scoreText.appendChild(loseText);
     main.appendChild(thegame);
+    main.appendChild(scoreText)
     main.appendChild(scoreBoard);
     main.appendChild(returnBtn);
     returnBtn.textContent = "Exit";
+    winText.textContent = "Player score"
+    loseText.textContent = "Machine score"
     win.textContent = 0;
     lose.textContent = 0;
 
