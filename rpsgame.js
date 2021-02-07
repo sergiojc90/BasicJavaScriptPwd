@@ -104,14 +104,3 @@ function playRound(playerSelection,computerSelection){
     return endgame;
 
 }
-
-function game(){
-
-        let machine = computerPlay();
-        let user = prompt("Selecto rock, paper or scissors").toUpperCase();
-
-        console.log("You selected " + user);
-        console.log("The machine selected "+ machine);
-
-        return playRound(user,machine);
-}
