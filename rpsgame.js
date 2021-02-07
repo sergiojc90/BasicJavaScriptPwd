@@ -2,6 +2,9 @@ const main = document.getElementById("main");
 const title = document.getElementById("title");
 const startBtn = document.querySelector("#startBtn");
 const thegame = document.createElement("div");
+const scoreBoard = document.createElement("div");
+const win = document.createElement("div");
+const lose = document.createElement("div");
 const rock = document.createElement("img");
 const paper = document.createElement("img");
 const scissors = document.createElement("img");
@@ -17,6 +20,11 @@ scissors.setAttribute("class","options");
 scissors.setAttribute("name","SCISSORS");
 scissors.setAttribute("src","./images/scissors.png");
 thegame.setAttribute("class","theGame");
+scoreBoard.setAttribute("class","scoreBoard");
+win.setAttribute("id","win");
+win.setAttribute("class","score");
+lose.setAttribute("id","lose");
+lose.setAttribute("class","score");
 returnBtn.setAttribute("class","returnBtn");
 
 
@@ -29,11 +37,16 @@ function startGame(e){
     thegame.appendChild(rock);
     thegame.appendChild(paper);
     thegame.appendChild(scissors);
+    scoreBoard.appendChild(win);
+    scoreBoard.appendChild(lose);
     main.appendChild(thegame);
+    main.appendChild(scoreBoard);
     main.appendChild(returnBtn);
     returnBtn.textContent = "Exit";
+    win.textContent = 0;
+    lose.textContent = 0;
 
-    window.addEventListener("click",player)
+    window.addEventListener("click",player);
 }
 
 function player(e){
@@ -41,6 +54,7 @@ function player(e){
     const optionSelection = document.querySelector(`img[name ="${playerSelection}"`);
     if(!optionSelection) return;
     playRound(playerSelection,computerPlay())
+
 }
 // Fuction to create a random number and select rock, paper or scissors depending on the result.
 function computerPlay(){

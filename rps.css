@@ -9,7 +9,7 @@ h1{
     color: white;
     text-shadow: 0 0 1rem black;
     padding-top: 5vh;
-    padding-bottom: 25vh;
+    padding-bottom: 10vh;
 }
 img{
     -webkit-user-drag: none;
@@ -22,23 +22,39 @@ img{
     min-height: 100vh;
     align-items: center;
 }
+.scoreBoard{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.score{
+    background: rgb(26,96,189);
+    background: linear-gradient(59deg, rgba(26,96,189,1) 0%, rgba(90,105,175,1) 50%, rgba(31,43,180,1) 90%);
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
 .options{
-    padding: 10px;
-    height: 20vh;
-    width: 200px;
+    padding: 5vw;
+    height: 150px;
+    width: 150px;
 }
 .options:hover{
     transform: scale(1.2);
     cursor: pointer;
-    border-radius: 10px;
-    border: 3px solid #7a67a5;
-    background: rgb(206,209,227);
-    background: linear-gradient(59deg, rgba(206,209,227,1) 0%, rgba(193,205,204,1) 55%, rgba(139,152,159,1) 100%);
 }
 .theGame{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .btn{
     border: .4rem solid black;
@@ -65,13 +81,13 @@ img{
     font-size: 1.5rem;
     font-style: italic;
     position: fixed;
-    bottom: 10vh;
-    left: 10vh;
+    bottom: 5vh;
+    left: 5vh;
     padding: 10px;
     
 }
 .returnBtn:hover{
-    transform: scale(1.3);
+    transform: scale(1.1);
     cursor: pointer;
     border: 3px solid #ffee00;
     border-radius: 5px;
