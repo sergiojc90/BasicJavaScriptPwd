@@ -35,6 +35,10 @@ returnBtn.setAttribute("class","returnBtn");
 
 startBtn.addEventListener("click", startGame);
 
+let userResult = 0;
+let compResult = 0;
+
+
 // This function create the images for rock, paper, scissors options.
 function startGame(e){
     this.parentNode.removeChild(this);
@@ -54,25 +58,39 @@ function startGame(e){
     returnBtn.textContent = "Exit";
     winText.textContent = "Player score"
     loseText.textContent = "Machine score"
-    win.textContent = 0;
-    lose.textContent = 0;
-
+    
     window.addEventListener("click",player);
 }
 
 function player(e){
+
+
     const playerSelection = e.target.name;
     const optionSelection = document.querySelector(`img[name ="${playerSelection}"`);
     if(!optionSelection) return;
     const computerResult = computerPlay();
     computerimg.setAttribute("class","optionsComp");
     computerimg.setAttribute("src",`./images/${computerResult.toLowerCase()}.png`);
-    if (playRound(playerSelection,computerResult)=="WIN"){
 
-    };
+    if(playRound(playerSelection,computerResult)=="WIN"){
+        userResult++;
+    }else if(playRound(playerSelection,computerResult)=="LOSE"){
+        compResult++;
+    }
+    win.textContent = userResult;
+    lose.textContent = compResult;
+    if(userResult==5){
+        alert("Congratulations! You won the match");
+        window.location.reload();
+    }
+    if(compResult==5){
+        alert("Too bad, you lost the match :(");
+        window.location.reload();
+    }
 }
 // Fuction to create a random number and select rock, paper or scissors depending on the result.
-function computerPlay(){
+function computerPlay(){ 
+
     let computer = Math.random()*9;
     let selection = "";
     
