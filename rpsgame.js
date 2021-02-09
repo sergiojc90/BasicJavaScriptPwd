@@ -78,6 +78,11 @@ function startGame(e){
     window.addEventListener("click",player);
 }
 
+// The player(e) function gets the value of the img tag that is selected by the player
+// and then calls to the computerPlay function in order to create a random choiche for the computer
+// With the player and computer choices, we then call the playRound function inside and if to evalueate both choices
+// We add 1 to the userResult if the player wins or to the compResult if the machine wins.
+// Then we test if the result of either side is equal to 5 to end the match.
 function player(e){
     const playerSelection = e.target.name;
     const optionSelection = document.querySelector(`img[name ="${playerSelection}"`);
