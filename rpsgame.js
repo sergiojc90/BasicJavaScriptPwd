@@ -69,13 +69,12 @@ function startGame(e){
     main.appendChild(scoreText);
     main.appendChild(scoreBoard);
     main.appendChild(returnBtn);
-
     
     returnBtn.textContent = "Exit";
     winText.textContent = "Player score"
     loseText.textContent = "Machine score"
     
-
+    returnBtn.setAttribute("onclick","window.location.reload()")
     window.addEventListener("click",player);
 }
 
