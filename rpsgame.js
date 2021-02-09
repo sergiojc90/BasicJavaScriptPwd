@@ -1,3 +1,6 @@
+// Since we are starting with a plain html file,
+// we are going to create all the sections with JavaScritp
+
 const main = document.getElementById("main");
 const title = document.getElementById("title");
 const startBtn = document.querySelector("#startBtn");
@@ -14,6 +17,8 @@ const paper = document.createElement("img");
 const scissors = document.createElement("img");
 const returnBtn = document.createElement("div");
 
+// After the creation of each object and section,
+// the next step is to assign the id's, class, names and sources of the images
 rock.setAttribute("class","options");
 rock.setAttribute("name","ROCK");
 rock.setAttribute("src","./images/rock.png");
@@ -32,17 +37,26 @@ lose.setAttribute("id","lose");
 lose.setAttribute("class","score");
 returnBtn.setAttribute("class","returnBtn");
 
-
+// When we click the start button in the initial page,
+// we are going to create a function that append all the childrens
+// that we created in the last step
 startBtn.addEventListener("click", startGame);
 
+// Initial counter for the scoreboard
 let userResult = 0;
 let compResult = 0;
 
 
 // This function create the images for rock, paper, scissors options.
 function startGame(e){
+    // We delete the start button
     this.parentNode.removeChild(this);
-    title.textContent = "Choose one option";
+
+    // We change the h1 tag to indicate the player that he can
+    // select rock, paper or scissors
+    title.textContent = "Choose one option. First to 5 wins";
+
+    // We append all the sections that we have created before
     thegame.appendChild(rock);
     thegame.appendChild(paper);
     thegame.appendChild(scissors);
@@ -55,16 +69,17 @@ function startGame(e){
     main.appendChild(scoreText);
     main.appendChild(scoreBoard);
     main.appendChild(returnBtn);
+
+    
     returnBtn.textContent = "Exit";
     winText.textContent = "Player score"
     loseText.textContent = "Machine score"
     
+
     window.addEventListener("click",player);
 }
 
 function player(e){
-
-
     const playerSelection = e.target.name;
     const optionSelection = document.querySelector(`img[name ="${playerSelection}"`);
     if(!optionSelection) return;
@@ -88,6 +103,7 @@ function player(e){
         window.location.reload();
     }
 }
+
 // Fuction to create a random number and select rock, paper or scissors depending on the result.
 function computerPlay(){ 
 
@@ -104,6 +120,7 @@ function computerPlay(){
     return selection;
 }
 
+// Rock, paper, scissors function using switch and case method.
 function playRound(playerSelection,computerSelection){
 
     let endgame = "";
