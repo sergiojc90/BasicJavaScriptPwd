@@ -47,7 +47,8 @@ function startGame(e){
     scoreText.appendChild(winText);
     scoreText.appendChild(loseText);
     main.appendChild(thegame);
-    main.appendChild(scoreText)
+    main.appendChild(computerimg);
+    main.appendChild(scoreText);
     main.appendChild(scoreBoard);
     main.appendChild(returnBtn);
     returnBtn.textContent = "Exit";
@@ -56,21 +57,19 @@ function startGame(e){
     win.textContent = 0;
     lose.textContent = 0;
 
-    let game = window.addEventListener("click",player);
-
-    if(game=="WIN"){
-        win.textContent++;
-    }else if(game=="LOSE"){
-        lose.textContent++;
-    }
-
+    window.addEventListener("click",player);
 }
 
 function player(e){
     const playerSelection = e.target.name;
     const optionSelection = document.querySelector(`img[name ="${playerSelection}"`);
     if(!optionSelection) return;
-    return playRound(playerSelection,computerPlay());
+    const computerResult = computerPlay();
+    computerimg.setAttribute("class","optionsComp");
+    computerimg.setAttribute("src",`./images/${computerResult.toLowerCase()}.png`);
+    if (playRound(playerSelection,computerResult)=="WIN"){
+
+    };
 }
 // Fuction to create a random number and select rock, paper or scissors depending on the result.
 function computerPlay(){
