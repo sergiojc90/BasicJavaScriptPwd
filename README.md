@@ -1,6 +1,8 @@
 # Rock, paper, scissors game
 
-This is the repository of rock,paper,scissors game project, my main object was to manipulate the DOM as much as possible.
+This is the repository of my  rock,paper,scissors game project, and it is part of The Odin Project Curriculum.
+
+My main object was to manipulate the DOM as much as possible.
 
 The rockpaper.html corresponds to the index document, as you can observe, it only has the main section with two subelements (an h1 and a div) and the script tag.
 This was made on purpose in order to create and manipulate as much objects in the DOM.
